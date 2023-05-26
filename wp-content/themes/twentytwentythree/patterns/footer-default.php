@@ -16,7 +16,7 @@
 		<?php
 		printf(
 			/* Translators: WordPress link. */
-			esc_html__( 'Proudly powered by %s', 'twentytwentythree' ),
+			esc_html__( 'Proudly powered by Vaggelis Koskina, no %s', 'twentytwentythree' ),
 			'<a href="' . esc_url( __( 'https://wordpress.org', 'twentytwentythree' ) ) . '" rel="nofollow">WordPress</a>'
 		)
 		?>
