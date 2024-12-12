@@ -1,0 +1,2357 @@
+# Copyright (C) 2024 DAEV.tech
+# This file is distributed under the GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Synchro 1.12.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsynchro\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-05-28T12:39:49+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: wpsynchro\n"
+
+#. Plugin Name of the plugin
+#: D:/development/wp-synchro/plugin/wpsynchro/wpsynchro.php
+msgid "WP Synchro"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: D:/development/wp-synchro/plugin/wpsynchro/wpsynchro.php
+msgid "https://daev.tech/wpsynchro"
+msgstr ""
+
+#. Description of the plugin
+#: D:/development/wp-synchro/plugin/wpsynchro/wpsynchro.php
+msgid "Professional migration plugin for WordPress - Migration of database and files made easy"
+msgstr ""
+
+#. Author of the plugin
+#: D:/development/wp-synchro/plugin/wpsynchro/wpsynchro.php
+msgid "DAEV.tech"
+msgstr ""
+
+#. Author URI of the plugin
+#: D:/development/wp-synchro/plugin/wpsynchro/wpsynchro.php
+msgid "https://daev.tech"
+msgstr ""
+
+#: src/API/ClientSyncDatabase.php:35
+msgid "Error from database sync service - Check the log file for further information."
+msgstr ""
+
+#. translators: %s is replaced with file path to database backup
+#: src/API/DatabaseBackup.php:117
+msgid "Appending create table for database backup to %s failed."
+msgstr ""
+
+#. translators: %s is replaced with file path to database backup
+#: src/API/DatabaseBackup.php:142
+msgid "Appending databasebackup to %s failed."
+msgstr ""
+
+#: src/API/HealthCheck.php:83
+msgid "WP Synchro MU-plugin is enabled in Setup, but is not loading. That can cause problems and bad performance in migrations. Try to disable it and re-enable it in WP Synchro > Setup menu and see if this error persist."
+msgstr ""
+
+#: src/API/HealthCheck.php:85
+msgid "WP Synchro MU-plugin is not currently loaded - You should really consider enabling it in WP Synchro > Setup menu, as it boosts performance and cause much less problems during migrations."
+msgstr ""
+
+#: src/API/HealthCheck.php:97
+msgid "Empty database table prefix is not supported by WP Synchro (or by WordPress in newer versions) - To fix this, you must set a table prefix"
+msgstr ""
+
+#: src/API/HealthCheck.php:123
+msgid "WP Synchro database version is newer than the currently installed plugin version - Please upgrade plugin to newest version - Continue at own risk"
+msgstr ""
+
+#: src/API/HealthCheck.php:134
+msgid "Access key for this site is not set - This needs to be configured for WP Synchro to work."
+msgstr ""
+
+#. translators: %s is replaced with comma separated list of PHP extensions
+#: src/API/HealthCheck.php:153
+msgid "Missing PHP extensions for WP Synchro to work. Enable extension(s) '%s' to php.ini and reload."
+msgstr ""
+
+#. translators: %d is replaced with number
+#: src/API/HealthCheck.php:167
+msgid "Your database server is misconfigured - The setting 'max_allowed_packet' is too low. It is currently set to: %d. Check out the documentation for the SQL server you are using and correct this setting."
+msgstr ""
+
+#: src/API/HealthCheck.php:179
+msgid "SAVEQUERIES constant is set. This is normally only for debugging. It will generate out of memory errors with WP Synchro migrations"
+msgstr ""
+
+#. translators: 1%d is replaced with simple number, 2%s is replaced with HTTP return code, like 200, 3%d er replaced by simple number
+#: src/API/HealthCheck.php:238
+msgid "Service test error - Tried making %d consecutive requests (with HTTP %s) to a test service on this site - %d of them failed."
+msgstr ""
+
+#: src/API/HealthCheck.php:251
+msgid "Error from request (number %d):"
+msgstr ""
+
+#: src/API/HealthCheck.php:257
+msgid ""
+"This site is protected by Basic Authentication, which requires a username and password.\n"
+"                        You can add the correct username/password in the 'Setup' menu."
+msgstr ""
+
+#: src/API/HealthCheck.php:263
+msgid "Got spaces in the response from API, either before or after the expected content. This is an indication that there is a problem somewhere in your code. Can sometimes be fixed by reinstalling WordPress files. Otherwise looks for spaces after closing PHP tags. This can cause problems for WP Synchro and other plugins also, so you should get that fixed."
+msgstr ""
+
+#: src/API/HealthCheck.php:267
+msgid "The response length is different from expected length. This is often because of invalid characters before or after the expected response. This often comes from errors in the code other places on the site - Expected '%s' - Got: '%s'"
+msgstr ""
+
+#: src/API/HealthCheck.php:272
+msgid "Error from request (number %d) - Got wrong data in response from webservice - Expected '%s' - Got: '%s' - This means that somewhere in the code, extra characters are being sent, most likely as an error. Look for characters or spaces after closing PHP tags."
+msgstr ""
+
+#: src/API/HealthCheck.php:280
+msgid "The pattern of errors suggest you are using LocalWP as development environment. It contains a bug where 50% of remote requests fail, when called from the code. That is why request 2 and 4 fails, but 1,3 and 5 succeed. Read more about it in our documentation."
+msgstr ""
+
+#: src/API/HealthCheck.php:282
+msgid "This issue is most likely caused by a misconfiguration of the hosting environment. Most often because of too few available worker processes. See more documentation on this in our documentation."
+msgstr ""
+
+#: src/API/HealthCheck.php:308
+msgid "Service error - Can not reach 'initiate' service - Check that services is accessible and not being blocked"
+msgstr ""
+
+#: src/API/HealthCheck.php:325
+msgid "Service error - Masterdata service returns improper response - Data was not returned in usable way - Check PHP error log"
+msgstr ""
+
+#: src/API/HealthCheck.php:328
+msgid "Service error - Can not reach 'masterdata' service - Check that WP Synchro is activated and service accessible"
+msgstr ""
+
+#: src/API/HealthCheck.php:342
+msgid "WP Synchro log dir is not writable for PHP - Path: %s "
+msgstr ""
+
+#: src/API/HealthCheck.php:364
+msgid "Path that WP Synchro might use for migration is not writable- Path: %s -  This can be caused by PHP's open_basedir setting or file permissions"
+msgstr ""
+
+#: src/API/Initiate.php:33
+msgid "Pulling from this site is not allowed - Change configuration on remote server"
+msgstr ""
+
+#: src/API/Initiate.php:35
+msgid "Pushing to this site is not allowed - Change configuration on remote server"
+msgstr ""
+
+#: src/API/Initiate.php:48
+msgid "Remote host does not allow that - Make sure it is same WP Synchro version"
+msgstr ""
+
+#: src/API/LoadAPI.php:211
+msgid "You do not have access to this service or security token is no longer valid - Go back and try again."
+msgstr ""
+
+#: src/API/MasterData.php:38
+msgid "Error from remote server:"
+msgstr ""
+
+#: src/API/PopulateFileList.php:163
+msgid "Could not create database table needed for file population on the source site - This is normally because database user does not have access to create tables on the database."
+msgstr ""
+
+#: src/API/VerifyMigration.php:78
+msgid "The remote URL is responding with a redirect to %s, which may or may not cause problems connecting with WP Synchro API services."
+msgstr ""
+
+#: src/API/VerifyMigration.php:80
+msgid "The remote URL is responding with a redirect http code (3xx) to another url, which may or may not cause problems connecting with WP Synchro API services."
+msgstr ""
+
+#: src/API/VerifyMigration.php:84
+msgid "The remote URL is responding with a non-successful response (HTTP %d), which may or may not cause problems connecting with WP Synchro API services."
+msgstr ""
+
+#: src/API/VerifyMigration.php:176
+msgid "The website url does not seem to be valid - Please enter a valid website url"
+msgstr ""
+
+#: src/API/VerifyMigration.php:180
+msgid "The access key does not seem to be valid - Please enter a valid access key"
+msgstr ""
+
+#: src/API/VerifyMigration.php:185
+msgid "The type of migration does not seem to be valid - Please choose a valid migration type"
+msgstr ""
+
+#: src/API/VerifyMigration.php:201
+msgid "Could not initialize with %s - Check that WP Synchro is installed, connection to the site is not blocked and that health check runs without errors on the site. If basic authentication is enabled on the remote site, make sure connection is set to basic authentication with correct username and password."
+msgstr ""
+
+#: src/API/VerifyMigration.php:233
+msgid "Tried to get masterdata from %s, but got wrong response. Make sure WP Synchro health check runs without error on both sites."
+msgstr ""
+
+#: src/API/VerifyMigration.php:237
+msgid "Could not get masterdata from %s - Check that WP Synchro is installed, connection to the site is not blocked and that health check runs without errors on the site"
+msgstr ""
+
+#: src/CLI/WPCLICommand.php:43
+msgid "Migration id \"%s\" could not be found. Make sure it is identical to the one found on the overview page in WP Synchro."
+msgstr ""
+
+#: src/CLI/WPCLICommand.php:49
+msgid "Starting migration..."
+msgstr ""
+
+#: src/CLI/WPCLICommand.php:70
+msgid "Migration completed with 0 errors"
+msgstr ""
+
+#: src/Database/DatabaseBackup.php:113
+msgid "Database backup Service responded with error, which means we can not continue the migration."
+msgstr ""
+
+#: src/Database/DatabaseBackup.php:221
+msgid "Row %s / %s"
+msgstr ""
+
+#: src/Database/DatabaseFinalize.php:51
+msgid "Preparing database finalize"
+msgstr ""
+
+#: src/Database/DatabaseFinalize.php:63
+msgid "Finalizing table %d out of %d"
+msgstr ""
+
+#: src/Database/DatabaseFinalize.php:94
+msgid "Removing old temporary table - %d out of %d"
+msgstr ""
+
+#: src/Database/DatabaseFinalize.php:115
+msgid "Check that all tables on target is in correct case"
+msgstr ""
+
+#: src/Database/DatabaseFinalize.php:162
+msgid "Finalize: Error in database migration for table %s - It is not transferred"
+msgstr ""
+
+#: src/Database/DatabaseFinalize.php:348
+msgid "Could not retrieve data from remote site for finalizing"
+msgstr ""
+
+#: src/Database/DatabaseFinalize.php:414
+msgid "Finalize: Table %s is not found with the correct case. We found a table called %s. This may or may not give you problems. This happens due to SQL server configuration."
+msgstr ""
+
+#: src/Database/DatabaseFinalize.php:418
+msgid "Finalize: Table %s is not found on target. It may be a problem with the rename from temp table name."
+msgstr ""
+
+#: src/Database/DatabaseFinalize.php:436
+msgid "Finalize: Error in database migration for table %s - It should not contain any rows"
+msgstr ""
+
+#: src/Database/DatabaseFinalize.php:442
+msgid "Finalize: Error in database migration for table %s - No rows has been transferred, but should contain %d rows. Normally this is because the ressource limits has been hit and the database content is too large. Contact support if this continues to fail."
+msgstr ""
+
+#: src/Database/DatabaseFinalize.php:448
+msgid "Finalize: Warning in database migration for table %s - It differs more than %d%% in size, which indicate something has gone wrong during transfer. We found %d rows, but expected around %d rows."
+msgstr ""
+
+#: src/Database/DatabaseHelperFunctions.php:51
+msgid "Migration aborted, due to a SQL query failing. See WP Synchro log (found in menu \"Logs\") for specific information about the query that failed. The specific error from database server was: \"%s\"."
+msgstr ""
+
+#: src/Database/DatabaseHelperFunctions.php:56
+msgid "That means that the key was longer than supported on the target database. The table need to be fixed or excluded from migration. See documentation for further help."
+msgstr ""
+
+#: src/Database/DatabaseHelperFunctions.php:59
+msgid "That means that the charset/collation used is not supported by the target database engine. The table charset/collations needs to be changed into a supported charset/collation for the target database or excluded from migration. See documentation for further help."
+msgstr ""
+
+#: src/Database/DatabaseHelperFunctions.php:62
+msgid "The error was caused by trying to create a view in the database. The error is normally thrown from the database server, when the view references tables that do not exist on the target database, so make sure they are there."
+msgstr ""
+
+#: src/Database/DatabaseHelperFunctions.php:65
+msgid "If you need help, contact WP Synchro support."
+msgstr ""
+
+#: src/Database/DatabaseSync.php:285
+msgid "Database migration failed with error, which means we can not continue the migration."
+msgstr ""
+
+#: src/Database/DatabaseSync.php:422
+msgid "Large row with binary column ignored from table: %s - Size of value: %d - Max size %d bytes - Increase memory limit on server"
+msgstr ""
+
+#: src/Database/DatabaseSync.php:448
+msgid "Large row ignored from table: %s - Size: %d - This happens when a table row is larger than your system limits allows. These limits are a combination of max SQL packet size, memory limits and PHP max_post_size on both ends of the migration."
+msgstr ""
+
+#: src/Database/DatabaseSync.php:671
+msgid "Data: %s / %s - Rows: %s / %s"
+msgstr ""
+
+#: src/Files/FilesSync.php:98
+msgid "Indexing files (can take a while)"
+msgstr ""
+
+#: src/Files/FilesSync.php:103
+msgid "Determine files to delete and transfer"
+msgstr ""
+
+#: src/Files/FilesSync.php:116
+msgid "Waiting for confirmation on file changes"
+msgstr ""
+
+#: src/Files/FilesSync.php:125
+msgid "Transferring files"
+msgstr ""
+
+#: src/Files/FinalizeFiles.php:52
+msgid "Optimizing files to delete: %d"
+msgstr ""
+
+#: src/Files/FinalizeFiles.php:59
+msgid "Remaining files to delete: %d"
+msgstr ""
+
+#: src/Files/FinalizeFiles.php:143
+msgid "Failed during finalizing files, which means we can not continue the migration."
+msgstr ""
+
+#: src/Files/PopulateListHandler.php:177
+msgid "Found overlapping filepaths to migrate: %s and %s. Please remove one of them before starting again."
+msgstr ""
+
+#: src/Files/PopulateListHandler.php:310
+msgid "Data returned during file population is invalid, which means we can not continue the migration."
+msgstr ""
+
+#: src/Files/PopulateListHandler.php:314
+msgid "File population failed, which means we can not continue the migration."
+msgstr ""
+
+#: src/Files/SyncList.php:46
+msgid "Could not create table needed for file population on this site - This is normally because database user does not have access to create tables on the database."
+msgstr ""
+
+#: src/Files/SyncList.php:100
+msgid "All files in webroot"
+msgstr ""
+
+#: src/Files/SyncList.php:117
+msgid "Filelocation"
+msgstr ""
+
+#: src/Files/SyncList.php:149
+msgid "Could not complete inserting file list into database in time before PHP timeout. You should increse PHP max_execution_time to prevent this error. Or you can make a custom migration with only the needed files."
+msgstr ""
+
+#: src/Files/SyncList.php:442
+msgid "(Source: %s files - Target: %s files)"
+msgstr ""
+
+#: src/Files/SyncList.php:453
+msgid "(File: %d / %d - Size: %s / %s)"
+msgstr ""
+
+#: src/Files/TransferFiles.php:111
+msgid "Failed during transfer of files to remote site, which means we can not continue the migration."
+msgstr ""
+
+#: src/Files/TransferFiles.php:162
+msgid "Failed during fetching files from remote site, which means we can not continue the migration."
+msgstr ""
+
+#: src/Files/TransportHandler.php:31
+msgid "File no longer exist or could not be read: %s  - Ignoring"
+msgstr ""
+
+#: src/Files/TransportHandler.php:48
+msgid "Could not delete file %s on target before creating directory with same location"
+msgstr ""
+
+#: src/Files/TransportHandler.php:56
+msgid "Could not create directory %s on target - Check permissions are correct"
+msgstr ""
+
+#: src/Files/TransportHandler.php:84
+msgid "Creating file %s failed - Could not write to filesystem - This is normally due to filename not being supported on target platform or because of wrong permissions."
+msgstr ""
+
+#: src/Files/TransportHandler.php:90
+msgid "Appending temporary filedata to %s failed."
+msgstr ""
+
+#: src/Files/TransportHandler.php:97
+msgid "Could not create directory %s on target for file %s. Check permissions."
+msgstr ""
+
+#: src/Finalize/FinalizeSync.php:149
+msgid "Some finalize actions failed to run - This can be cache clearing error or other error from target site. This normally does not impact the migration that much and therefore just a warning."
+msgstr ""
+
+#: src/Initiate/InitiateSync.php:59
+msgid "Failed initializing - Could not get a valid token from local server"
+msgstr ""
+
+#: src/Initiate/InitiateSync.php:66
+msgid "Failed initializing - Could not get a valid token from remote server"
+msgstr ""
+
+#: src/Initiate/InitiateSync.php:90
+msgid "Failed initializing - No 'to' token could be found after initialize"
+msgstr ""
+
+#: src/Initiate/InitiateSync.php:93
+msgid "Failed initializing - No 'from' token could be found after initialize"
+msgstr ""
+
+#: src/Initiate/InitiateSync.php:121
+msgid "Could not initialize with %s - Check that WP Synchro is installed, connection to the site is not blocked, migration type (push/pull) is allowed in setup and that health check runs without errors on the site"
+msgstr ""
+
+#: src/Initiate/InitiateTokenRetrieval.php:72
+msgid "Could not initate with site: "
+msgstr ""
+
+#: src/Masterdata/MasterdataSync.php:61
+msgid "Did not retrieve correct database masterdata from target '%s' - See log file"
+msgstr ""
+
+#: src/Masterdata/MasterdataSync.php:84
+msgid "WP Synchro plugin versions do not match on both sides. One runs version %s and other runs %s. Make sure they use same version to prevent problems caused by different versions of plugin."
+msgstr ""
+
+#: src/Masterdata/MasterdataSync.php:89
+msgid "WordPress versions are different on the source and target. Source WP version is: %s and target WP version is: %s. This is just a warning, as in most cases it will not cause problems. But in some cases it can cause failures in the very last steps of the migration. If you experience that, make sure to have the same WP version on both ends."
+msgstr ""
+
+#: src/Masterdata/MasterdataSync.php:94
+msgid "Database table prefixes are different on the source and target site. Source uses '%s' and target uses '%s'. Table prefix migration is not enabled in the migration configuration. This is just a warning, as the migration can complete, but the tables will not be used by the target site. Recommended action is to turn on the table prefix migration in the migration configuration."
+msgstr ""
+
+#: src/Masterdata/MasterdataSync.php:101
+msgid "When doing file migrations, it is required to have the WP Synchro MU plugin active on the target site. It can be enabled on the target site in menu WP Synchro > Setup."
+msgstr ""
+
+#: src/Masterdata/MasterdataSync.php:134
+msgid "The database table \"%s\" is not supported on the target database version (%s) and therefore it can not be migrated. To fix this error, either exclude the table from migration or upgrade the target database to a newer version."
+msgstr ""
+
+#: src/Masterdata/MasterdataSync.php:262
+msgid "Could not retrieve masterdata from target '%s', which means we can not continue the migration."
+msgstr ""
+
+#: src/Masterdata/MasterdataSync.php:382
+msgid "If you are moving uploads directory (media), you must add the following line to your wp-config.php on the site %s : <code>%s</code> - Make sure to add this line before loading WordPress in the bottom of wp-config.php"
+msgstr ""
+
+#: src/Masterdata/MasterdataSync.php:384
+msgid "All users from multisite is moved - Make sure to check and remove unwanted users on single site."
+msgstr ""
+
+#: src/Masterdata/MasterdataSync.php:388
+msgid "Users from source single site was merged with the users on the multisite. Make sure to check that the users are as expected."
+msgstr ""
+
+#: src/Migration/Migration.php:96
+msgid "Migrate"
+msgstr ""
+
+#. translators: %s is a site url
+#: src/Migration/Migration.php:100
+msgid "from this site to %s "
+msgstr ""
+
+#. translators: %s is a site url
+#: src/Migration/Migration.php:103
+msgid "from %s to this site"
+msgstr ""
+
+#: src/Migration/Migration.php:108
+msgid "Migration options"
+msgstr ""
+
+#: src/Migration/Migration.php:111
+#: dist/wpsynchro.js:2
+msgid "Type"
+msgstr ""
+
+#: src/Migration/Migration.php:113
+msgid "Migrate entire site (database and files)"
+msgstr ""
+
+#: src/Migration/Migration.php:115
+#: dist/wpsynchro.js:2
+msgid "Migrate entire database"
+msgstr ""
+
+#: src/Migration/Migration.php:117
+#: dist/wpsynchro.js:2
+msgid "Migrate all files"
+msgstr ""
+
+#: src/Migration/Migration.php:120
+msgid "Custom migration - But no data chosen for migration"
+msgstr ""
+
+#: src/Migration/Migration.php:122
+#: dist/wpsynchro.js:2
+msgid "Custom migration"
+msgstr ""
+
+#: src/Migration/Migration.php:128
+msgid "Self-signed and non-valid SSL certificates allowed"
+msgstr ""
+
+#: src/Migration/Migration.php:133
+msgid "Cron:"
+msgstr ""
+
+#: src/Migration/Migration.php:137
+msgid "Using basic authentication connection with user"
+msgstr ""
+
+#: src/Migration/Migration.php:142
+msgid "Database migration (including backup)"
+msgstr ""
+
+#: src/Migration/Migration.php:144
+#: dist/wpsynchro.js:2
+msgid "Database migration"
+msgstr ""
+
+#: src/Migration/Migration.php:148
+msgid "All database tables"
+msgstr ""
+
+#: src/Migration/Migration.php:157
+msgid "more"
+msgstr ""
+
+#: src/Migration/Migration.php:171
+msgid "File migration dirs/files (will ask for user confirmation)"
+msgstr ""
+
+#: src/Migration/Migration.php:173
+msgid "File migration dirs/files (will NOT ask for user confirmation)"
+msgstr ""
+
+#: src/Migration/Migration.php:182
+msgid "All files inside web root (except WordPress core files)"
+msgstr ""
+
+#: src/Migration/Migration.php:184
+msgid "No locations chosen for migration"
+msgstr ""
+
+#: src/Migration/Migration.php:211
+msgid "File migration is only available in PRO version"
+msgstr ""
+
+#: src/Migration/Migration.php:215
+msgid "Database backup is only available in PRO version"
+msgstr ""
+
+#: src/Migration/MigrationController.php:90
+msgid "Job is already running or error has happened - Check PHP error logs"
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:35
+#: src/Pages/AdminLog.php:34
+#: src/Pages/AdminLog.php:48
+#: src/Pages/AdminLog.php:119
+#: src/Pages/AdminSupport.php:40
+msgid "Security token is no longer valid - Go back and try again."
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:66
+msgid "Enter your license key"
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:70
+msgid "Your license is active and valid"
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:73
+msgid "Your license is not valid"
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:83
+#: src/WPSynchroBootstrap.php:151
+msgid "Licensing"
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:84
+msgid "Insert your license key for your PRO version, so you can use the full functionality of WP Synchro PRO."
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:88
+msgid "Your license key can be found on <a href=\"https://daev.tech\" target=\"_blank\">https://daev.tech</a> on My Account after login in with your credentials."
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:88
+msgid "The license key will be validated against license server and will be revalidated every day automatically."
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:91
+msgid "Currently used license key"
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:93
+msgid "starts with %s and ends with %s"
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:95
+msgid "(Set as constant in code)"
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:98
+msgid "no license key"
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:111
+msgid "License is in a unknown state - We are retrying to contact license server to determine state - Attempt %d of %d"
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:112
+msgid "Last retry was %s minutes ago and we will retry with ~%d min intervals up to %d attempts."
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:113
+msgid "Make sure it is possible to connect out of this webserver to license server at daev.tech domain."
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:117
+msgid "License is <u>valid</u> and <u>active</u>. Last checked %s hours ago."
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:121
+msgid "License is NOT valid. Last checked %s hours ago. Change your key to a valid one or contact support if you have questions."
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:122
+msgid "To recheck your current key, just save the key again and it will be re-validated."
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:127
+msgid "License is not yet validated - Insert your license key and validate it."
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:134
+msgid "Set license key"
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:137
+msgid "Your license key is hardcoded in code, as a PHP constant. It is called WPSYNCHRO_LICENSE_KEY and it overrides all others."
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:138
+msgid "To change it, you need to find the constant in code and change it there."
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:139
+msgid "If you remove the constant from code, you can change the license key right here after."
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:144
+msgid "If you want to re-validate the license key defined in constant, press the button below:"
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:145
+msgid "Re-check license key"
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:155
+msgid "New license key"
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:162
+msgid "Save license key and validate"
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:169
+msgid "Terms of use"
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:170
+msgid "By inserting your license key and saving it, you accept that we use this information to contact WP Synchro license server."
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:171
+msgid "After successful validation, the key will be revalidated every day to make sure it is still valid."
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:172
+msgid "On the server, the key will be checked and request is logged, along with your public IP address and site url."
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:173
+msgid "We dont save or send other information to the license server."
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:175
+msgid "For every migration, the license server will be contacted to verify the license and the active sites limit for your subscription."
+msgstr ""
+
+#: src/Pages/AdminLicensing.php:176
+msgid "These requests contain only your license key and the urls of migration. These will be logged along with your public IP address."
+msgstr ""
+
+#: src/Pages/AdminOverview.php:42
+msgid ""
+"You have used WP Synchro %d times now - We hope you are enjoying it and have saved some time and troubles.<br>\n"
+"            We try really hard to give you a high quality tool for WordPress site migrations.<br>\n"
+"            If you enjoy using WP Synchro, we would appreciate your review on\n"
+"            <a href='https://wordpress.org/support/plugin/wpsynchro/reviews/?rate=5#new-post' target='_blank'>WordPress plugin repository</a>.<br>\n"
+"            Thank you for the help."
+msgstr ""
+
+#: src/Pages/AdminOverview.php:71
+msgid "Migration was not deleted, as the security token is no longer valid. Try again."
+msgstr ""
+
+#: src/Pages/AdminOverview.php:89
+msgid "Migration was not duplicated, as the security token is no longer valid. Try again."
+msgstr ""
+
+#: src/Pages/AdminRunSync.php:39
+msgid "Security token is no longer valid - Go to overview page and try again"
+msgstr ""
+
+#: src/Pages/AdminRunSync.php:39
+#: src/WPSynchroBootstrap.php:146
+#: dist/wpsynchro.js:2
+msgid "Overview"
+msgstr ""
+
+#: src/Pages/AdminRunSync.php:44
+msgid "No migration_id provided - This should not happen"
+msgstr ""
+
+#: src/Pages/AdminRunSync.php:49
+msgid "No job_id provided - This should not happen"
+msgstr ""
+
+#: src/Pages/AdminRunSync.php:61
+msgid "Migration not found - This should not happen"
+msgstr ""
+
+#: src/Pages/AdminRunSync.php:87
+#: dist/wpsynchro.js:2
+msgid "Verify the file changes"
+msgstr ""
+
+#: src/Pages/AdminRunSync.php:88
+#: dist/wpsynchro.js:2
+msgid "Accept changes"
+msgstr ""
+
+#: src/Pages/AdminRunSync.php:89
+#: dist/wpsynchro.js:2
+msgid "Decline changes"
+msgstr ""
+
+#: src/Pages/AdminRunSync.php:90
+#: dist/wpsynchro.js:2
+msgid "Added/changed"
+msgstr ""
+
+#: src/Pages/AdminRunSync.php:91
+#: dist/wpsynchro.js:2
+msgid "Will be deleted"
+msgstr ""
+
+#: src/Pages/AdminRunSync.php:92
+#: dist/wpsynchro.js:2
+msgid "Choose if you want to see the files with full path, or just see clipped paths that start above the web root."
+msgstr ""
+
+#: src/Pages/AdminRunSync.php:93
+#: dist/wpsynchro.js:2
+msgid "Show full paths"
+msgstr ""
+
+#: src/Pages/AdminRunSync.php:94
+#: dist/wpsynchro.js:2
+msgid "Files that will be added or overwritten:"
+msgstr ""
+
+#: src/Pages/AdminRunSync.php:95
+#: dist/wpsynchro.js:2
+msgid "Files that will be deleted:"
+msgstr ""
+
+#: src/Pages/AdminRunSync.php:96
+#: dist/wpsynchro.js:2
+msgid "No files will be added or overwritten."
+msgstr ""
+
+#: src/Pages/AdminRunSync.php:97
+#: dist/wpsynchro.js:2
+msgid "There is no files marked for deletion."
+msgstr ""
+
+#: src/Pages/AdminSetup.php:37
+msgid "Security token is no longer valid - Try again."
+msgstr ""
+
+#: src/Pages/AdminSetup.php:102
+#: src/WPSynchroBootstrap.php:148
+msgid "Setup"
+msgstr ""
+
+#: src/Pages/AdminSetup.php:118
+msgid "WP Synchro settings are now updated"
+msgstr ""
+
+#: src/Pages/AdminSetup.php:126
+msgid "Configure settings"
+msgstr ""
+
+#: src/Pages/AdminSetup.php:129
+#: dist/wpsynchro.js:2
+msgid "Access key"
+msgstr ""
+
+#: src/Pages/AdminSetup.php:129
+msgid "Configure the access key used for accessing this migration from remote. Treat the access key like a password and keep it safe from others."
+msgstr ""
+
+#: src/Pages/AdminSetup.php:132
+msgid "Copy"
+msgstr ""
+
+#: src/Pages/AdminSetup.php:133
+msgid "Generate new access key"
+msgstr ""
+
+#: src/Pages/AdminSetup.php:137
+msgid "Allowed methods"
+msgstr ""
+
+#: src/Pages/AdminSetup.php:139
+msgid "Allow pull - Allow this site to be downloaded"
+msgstr ""
+
+#: src/Pages/AdminSetup.php:140
+msgid "Allow push - Allow this site to be overwritten"
+msgstr ""
+
+#: src/Pages/AdminSetup.php:144
+msgid "Optimize compatibility"
+msgstr ""
+
+#: src/Pages/AdminSetup.php:146
+msgid "Enable MU Plugin to optimize WP Synchro requests (highly recommended)"
+msgstr ""
+
+#: src/Pages/AdminSetup.php:146
+msgid "(Network wide)"
+msgstr ""
+
+#: src/Pages/AdminSetup.php:150
+msgid "Slow hosting"
+msgstr ""
+
+#: src/Pages/AdminSetup.php:150
+msgid "Timeouts may happen if the two servers are geographically far apart or under heavy load. This can be enabled to better handle this and allow for large timeout margins."
+msgstr ""
+
+#: src/Pages/AdminSetup.php:152
+msgid "Optimize for slow hosting or slow connections between servers"
+msgstr ""
+
+#: src/Pages/AdminSetup.php:157
+#: dist/wpsynchro.js:2
+msgid "Basic authentication"
+msgstr ""
+
+#: src/Pages/AdminSetup.php:157
+msgid "If this site is protected by Basic Authentication access protection, WP Synchro will try to auto-detect it, but it does not always work. In that case you need to fill out these fields. WP Synchro will use it to call local services for all migrations."
+msgstr ""
+
+#: src/Pages/AdminSetup.php:159
+msgid "username"
+msgstr ""
+
+#: src/Pages/AdminSetup.php:160
+msgid "password"
+msgstr ""
+
+#: src/Pages/AdminSetup.php:161
+msgid "WP Synchro will auto-detect these in most cases."
+msgstr ""
+
+#: src/Pages/AdminSetup.php:166
+msgid "Usage reporting"
+msgstr ""
+
+#: src/Pages/AdminSetup.php:166
+msgid "Help WP Synchro become even better, by allowing us to know which features you are using when doing migrations. All reported data sent can be seen in migration log, to provide full transparency."
+msgstr ""
+
+#: src/Pages/AdminSetup.php:168
+msgid "Allow plugin to report to developer which features are being used when doing migrations. No personal data of course."
+msgstr ""
+
+#: src/Pages/AdminSetup.php:173
+msgid "Save settings"
+msgstr ""
+
+#: src/Schedule/ScheduledMigration.php:183
+msgid "None yet"
+msgstr ""
+
+#: src/Schedule/ScheduledMigration.php:184
+msgid "As soon as possible"
+msgstr ""
+
+#: src/Schedule/ScheduledMigration.php:224
+#: dist/wpsynchro.js:2
+msgid "Hourly"
+msgstr ""
+
+#: src/Schedule/ScheduledMigration.php:227
+#: dist/wpsynchro.js:2
+msgid "Daily"
+msgstr ""
+
+#: src/Schedule/ScheduledMigration.php:230
+#: dist/wpsynchro.js:2
+msgid "Weekly"
+msgstr ""
+
+#: src/Status/MigrateStatus.php:72
+msgid "Initialize"
+msgstr ""
+
+#: src/Status/MigrateStatus.php:72
+msgid "Initiating migration on source and target and sets up security tokens on both ends"
+msgstr ""
+
+#: src/Status/MigrateStatus.php:75
+msgid "Masterdata"
+msgstr ""
+
+#: src/Status/MigrateStatus.php:75
+msgid "Fetching masterdata on both source and target and check that we are ready to migrate"
+msgstr ""
+
+#: src/Status/MigrateStatus.php:79
+msgid "Database backup"
+msgstr ""
+
+#: src/Status/MigrateStatus.php:79
+msgid "Backup of database tables that will be changed by database sync. Backup location can be found in the log file, which can be found in the 'Logs' menu"
+msgstr ""
+
+#: src/Status/MigrateStatus.php:84
+#: dist/wpsynchro.js:2
+msgid "Migrate database"
+msgstr ""
+
+#: src/Status/MigrateStatus.php:84
+msgid "Migrate the database, moving the database table rows to the target"
+msgstr ""
+
+#: src/Status/MigrateStatus.php:89
+#: dist/wpsynchro.js:2
+msgid "Migrate files"
+msgstr ""
+
+#: src/Status/MigrateStatus.php:89
+msgid "Migrate the files, by comparing and transferring the missing files"
+msgstr ""
+
+#: src/Status/MigrateStatus.php:93
+msgid "Finalizing"
+msgstr ""
+
+#: src/Status/MigrateStatus.php:93
+msgid "Completes the migration by doing the last few steps and cleaning up"
+msgstr ""
+
+#: src/Status/MigrateStatus.php:160
+msgid "The migration process seem to have problems - It may be PHP errors - please check the PHP logs"
+msgstr ""
+
+#: src/Templates/card-facebook.php:3
+msgid "Follow us on Facebook"
+msgstr ""
+
+#: src/Templates/card-facebook.php:4
+msgid "Get your WP Synchro related news directly on Facebook. We will keep you updated on changes, releases and post tips on how to improve your development workflow."
+msgstr ""
+
+#: src/Templates/card-facebook.php:5
+msgid "FOLLOW US"
+msgstr ""
+
+#: src/Templates/card-mailinglist.php:3
+msgid "Sign up to WP Synchro mailinglist"
+msgstr ""
+
+#: src/Templates/card-mailinglist.php:4
+msgid "Get your WP Synchro news, developer workflow tips and release announcements directly in your mailbox."
+msgstr ""
+
+#: src/Templates/card-mailinglist.php:5
+msgid "SIGN UP NOW"
+msgstr ""
+
+#: src/Templates/card-pro-version.php:3
+msgid "Get PRO version now - Free 14 day trial"
+msgstr ""
+
+#: src/Templates/card-pro-version.php:5
+msgid "With pro version you also get these features:"
+msgstr ""
+
+#: src/Templates/card-pro-version.php:7
+msgid "&#128161; Migrate files"
+msgstr ""
+
+#: src/Templates/card-pro-version.php:7
+msgid "Such as uploads, plugins, themes or even specific files. Only difference in files is transferred, making it really fast."
+msgstr ""
+
+#: src/Templates/card-pro-version.php:8
+msgid "&#128161; File changes confirmation"
+msgstr ""
+
+#: src/Templates/card-pro-version.php:8
+msgid "Make sure only the correct files are migrated."
+msgstr ""
+
+#: src/Templates/card-pro-version.php:9
+msgid "&#128161; Schedule migrations"
+msgstr ""
+
+#: src/Templates/card-pro-version.php:9
+msgid "Run migration via WP Cron or use the WP-CLI commands to schedule migrations using your system cron."
+msgstr ""
+
+#: src/Templates/card-pro-version.php:10
+msgid "&#128161; Database backup"
+msgstr ""
+
+#: src/Templates/card-pro-version.php:10
+msgid "Always be on the safe side when doing migrations."
+msgstr ""
+
+#: src/Templates/card-pro-version.php:11
+msgid "&#128161; Email notifications"
+msgstr ""
+
+#: src/Templates/card-pro-version.php:11
+msgid "So you know when migrations went well and when they did not."
+msgstr ""
+
+#: src/Templates/card-pro-version.php:12
+msgid "&#128161; Support for Basic Authentication"
+msgstr ""
+
+#: src/Templates/card-pro-version.php:12
+msgid "So you can migrate to and from username/password protected sites, such as staging sites."
+msgstr ""
+
+#: src/Templates/card-pro-version.php:13
+msgid "&#128161; Priority support"
+msgstr ""
+
+#: src/Templates/card-pro-version.php:13
+msgid "When on a busy schedule, solving a problem as fast as possible is important."
+msgstr ""
+
+#: src/Templates/card-pro-version.php:14
+msgid "&#128161; No more of these ads :)"
+msgstr ""
+
+#: src/Templates/card-pro-version.php:16
+msgid "Pretty much the ultimate tool for doing WordPress migrations, as it can be customized as needed."
+msgstr ""
+
+#: src/Templates/card-pro-version.php:19
+msgid "GET PRO VERSION"
+msgstr ""
+
+#: src/Templates/card-pro-version.php:20
+msgid "30 day money back guarantee"
+msgstr ""
+
+#: src/Transport/RemoteTransport.php:347
+msgid "Entering retry with remaining time %f"
+msgstr ""
+
+#: src/Transport/RemoteTransport.php:352
+msgid "Aborting retries because we dont have enough time - Tried %d times "
+msgstr ""
+
+#: src/Transport/RemoteTransport.php:368
+msgid "Got error connecting to service %s - Retry %d of %d "
+msgstr ""
+
+#: src/Transport/RemoteTransport.php:376
+msgid "Could not connect to %s service (HTTP statuscode: %d)"
+msgstr ""
+
+#: src/Transport/RemoteTransport.php:393
+msgid "SSL certificate is not valid or self-signed on host %s. To allow non-valid SSL certificates when running a migration, make sure it is set to allowed."
+msgstr ""
+
+#: src/Transport/RemoteTransport.php:397
+msgid "Service error - Can not reach service on host %s. Error message: %s"
+msgstr ""
+
+#: src/Transport/RemoteTransportResult.php:130
+msgid "Remote or local SSL certificate is not valid or self-signed. To allow non-valid SSL certificates, you need to edit the migration and change it."
+msgstr ""
+
+#: src/Transport/RemoteTransportResult.php:171
+msgid ""
+"The site %s is protected by Basic Authentication, which requires a username and password.\n"
+"                    If this is the remote site, the username/password should be added to the migration configuration.\n"
+"                    If the site is the 'local' site, you can add the username/password in the 'Setup' menu."
+msgstr ""
+
+#: src/Transport/RemoteTransportResult.php:175
+msgid ""
+"The site %s is protected by authentication of some kind, that we do not support.\n"
+"                    Contact support for further help and tell them this: Auth header was: %s"
+msgstr ""
+
+#: src/Updater/Puc/v4p9/Plugin/Ui.php:54
+msgid "View details"
+msgstr ""
+
+#: src/Updater/Puc/v4p9/Plugin/Ui.php:77
+msgid "More information about %s"
+msgstr ""
+
+#: src/Updater/Puc/v4p9/Plugin/Ui.php:128
+msgid "Check for updates"
+msgstr ""
+
+#: src/Updater/Puc/v4p9/Plugin/Ui.php:213
+msgctxt "the plugin title"
+msgid "The %s plugin is up to date."
+msgstr ""
+
+#: src/Updater/Puc/v4p9/Plugin/Ui.php:215
+msgctxt "the plugin title"
+msgid "A new version of the %s plugin is available."
+msgstr ""
+
+#: src/Updater/Puc/v4p9/Plugin/Ui.php:217
+msgctxt "the plugin title"
+msgid "Could not determine if updates are available for %s."
+msgstr ""
+
+#: src/Updater/Puc/v4p9/Plugin/Ui.php:223
+msgid "Unknown update checker status \"%s\""
+msgstr ""
+
+#: src/Updater/Puc/v4p9/Vcs/PluginUpdateChecker.php:98
+msgid "There is no changelog available."
+msgstr ""
+
+#: src/Utilities/Actions/EmailOnSyncFailure.php:67
+msgid "[Migration failed] - Sync to %s failed"
+msgstr ""
+
+#: src/Utilities/Actions/EmailOnSyncFailure.php:78
+msgid ""
+"Hi, \r\n"
+"\n"
+"We just want to notify you that a migration has failed.\n"
+"The migration is to %s \r\n"
+"\n"
+"Migration is running on %s \r\n"
+"\n"
+"This is an automated email generated by WP Synchro plugin."
+msgstr ""
+
+#: src/Utilities/Actions/EmailOnSyncSuccess.php:67
+msgid "[Migration success] - From %s to %s"
+msgstr ""
+
+#: src/Utilities/Actions/EmailOnSyncSuccess.php:78
+msgid ""
+"Hi, \r\n"
+"\n"
+"We just want to notify you that a migration was successful.\n"
+"The migration was from %s to %s  \r\n"
+"\n"
+"Migration is running on %s \r\n"
+"\n"
+"This is an automated email generated by WP Synchro plugin."
+msgstr ""
+
+#: src/Utilities/Activation.php:24
+msgid "WP Synchro does not support being network activated - Activate it on the sites needed instead. Beware that multisite is not supported, so use at own risk."
+msgstr ""
+
+#: src/Utilities/CommonFunctions.php:37
+msgid "WP Synchro requires PHP version %s or higher - Please update your PHP"
+msgstr ""
+
+#: src/Utilities/CommonFunctions.php:47
+msgid "WP Synchro requires MySQL version %s or higher - Please update your MySQL"
+msgstr ""
+
+#: src/Utilities/CommonFunctions.php:56
+msgid "WP Synchro requires WordPress version %s or higher - Please update your WordPress"
+msgstr ""
+
+#: src/Utilities/Compatibility/MUPluginHandler.php:61
+msgid "MU plugin dir %s could not be created - It is probably a permission issue"
+msgstr ""
+
+#: src/Utilities/Compatibility/MUPluginHandler.php:68
+msgid "MU plugin dir %s is not writable - It is probably a permission issue"
+msgstr ""
+
+#: src/Utilities/Compatibility/MUPluginHandler.php:84
+msgid "MU plugin %s could not be copied to MU plugin dir - It is probably a permission issue"
+msgstr ""
+
+#: src/Utilities/Compatibility/MUPluginHandler.php:101
+msgid "MU plugin %s could not be deleted - It is probably a permission issue"
+msgstr ""
+
+#: src/Utilities/ErrorHandler/CustomPHPErrorHandler.php:52
+msgid "[%s] %s - Fatal error happened, which was triggered in %s on line %d"
+msgstr ""
+
+#: src/Utilities/ErrorHandler/CustomPHPErrorHandler.php:62
+msgid "[%s] %s - Warning in %s on line %d"
+msgstr ""
+
+#: src/Utilities/ErrorHandler/CustomPHPErrorHandler.php:72
+msgid "[%s] %s - Triggered in %s on line %d"
+msgstr ""
+
+#: src/Utilities/JSData/HealthCheckData.php:20
+msgid "Health check for WP Synchro"
+msgstr ""
+
+#: src/Utilities/JSData/HealthCheckData.php:21
+msgid "Check if this site will work with WP Synchro. It checks service access, php extensions, hosting setup and more."
+msgstr ""
+
+#: src/Utilities/JSData/HealthCheckData.php:22
+msgid "Performing basic health check"
+msgstr ""
+
+#: src/Utilities/JSData/HealthCheckData.php:23
+msgid "Errors found"
+msgstr ""
+
+#: src/Utilities/JSData/HealthCheckData.php:24
+msgid "Warnings found"
+msgstr ""
+
+#: src/Utilities/JSData/HealthCheckData.php:25
+msgid "Tip: These tests can be rerun in 'Support' menu."
+msgstr ""
+
+#: src/Utilities/JSData/HealthCheckData.php:26
+msgid "Critical - Request to local WP Synchro health check service could not be sent or did not get no response."
+msgstr ""
+
+#: src/Utilities/JSData/HealthCheckData.php:27
+msgid "Critical - Could not parse the JSON response gotten from the healthcheck service. Should have returned valid JSON, but it did not and we were unable to fix it. This is very likely to cause problem with any attempts to use WP Synchro and many other plugins for that matter."
+msgstr ""
+
+#: src/Utilities/JSData/HealthCheckData.php:28
+msgid "Critical - Request to local WP Synchro health check service did not get a response at all."
+msgstr ""
+
+#: src/Utilities/JSData/HealthCheckData.php:29
+msgid "Critical - Request to service did not respond properly - HTTP {0} - Maybe service is blocked or returns invalid content. Response JSON:"
+msgstr ""
+
+#: src/Utilities/JSData/HealthCheckData.php:30
+msgid "Critical - Request to service did not respond properly - Maybe service is blocked or returns invalid content. Response JSON:"
+msgstr ""
+
+#: src/Utilities/JSData/UsageReportingData.php:17
+msgid "Help us make WP Synchro even better"
+msgstr ""
+
+#: src/Utilities/JSData/UsageReportingData.php:18
+msgid "Will you accept that we send 100% anonymized data to our server about your usage of WP Synchro.<br>We will <b>not</b> send any personal data at all, but only send which features you are using when doing a migration. The content we are sending to our server, can always be seen in the log file from the migration, for full transparency."
+msgstr ""
+
+#: src/Utilities/JSData/UsageReportingData.php:19
+msgid "We do this to improve the plugin in the right places and to understand what is actually being used and what is not."
+msgstr ""
+
+#: src/Utilities/JSData/UsageReportingData.php:20
+msgid "It can later be changed in Setup menu."
+msgstr ""
+
+#: src/Utilities/JSData/UsageReportingData.php:21
+msgid "I accept"
+msgstr ""
+
+#: src/Utilities/JSData/UsageReportingData.php:22
+msgid "No thanks"
+msgstr ""
+
+#: src/Utilities/Licensing/Licensing.php:166
+msgid "%s uses a WP Synchro PRO version that can not be validated using the current license key. Update license key on this site to a valid one and try again. This can be done in menu WP Synchro > Licensing."
+msgstr ""
+
+#: src/Utilities/Licensing/Licensing.php:217
+msgid "Migration was denied by WP Synchro license server, which can be caused by invalid license key or not having enough available sites on your current subscription. Log into https://daev.tech to check out your subscription state."
+msgstr ""
+
+#: src/WPSynchroBootstrap.php:147
+#: dist/wpsynchro.js:2
+msgid "Logs"
+msgstr ""
+
+#: src/WPSynchroBootstrap.php:150
+msgid "Scheduled"
+msgstr ""
+
+#: src/WPSynchroBootstrap.php:153
+#: dist/wpsynchro.js:2
+msgid "Support"
+msgstr ""
+
+#: src/WPSynchroBootstrap.php:154
+#: dist/wpsynchro.js:2
+msgid "Changelog"
+msgstr ""
+
+#: dist/deactivation.js:1
+msgid "Help us improve"
+msgstr ""
+
+#: dist/deactivation.js:1
+msgid "Why you want to deactivate WP Synchro?"
+msgstr ""
+
+#: dist/deactivation.js:1
+msgid "How can we improve WP Synchro?"
+msgstr ""
+
+#: dist/deactivation.js:1
+msgid "You need to select an option or write a comment, before you can send feedback."
+msgstr ""
+
+#: dist/deactivation.js:1
+msgid "Send feedback and deactivate"
+msgstr ""
+
+#: dist/deactivation.js:1
+msgid "Privacy information: Feedback will be sent to webservice at daev.tech from your browser - Will contain the selected reason for deactivation, the comment, site language, WordPress version, WP Synchro version and if it is FREE or PRO version. Nothing else will be sent or saved."
+msgstr ""
+
+#: dist/deactivation.js:1
+msgid "Just deactivate"
+msgstr ""
+
+#: dist/deactivation.js:1
+#: dist/wpsynchro.js:2
+msgid "Cancel"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "This should not be synced and will be excluded from migrations"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Choose the entire dir or use the other add buttons"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Could not fetch filedata - Normally due to a timed out security token. Refresh page and continue."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Migrate strategy"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Keep"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Keep files on target not present on source. Faster, but will potentially leave unused files on target"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Clean"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Delete files on target not present on source. Slower, but more clean, because unused files will be removed"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Exclusions"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Exclusions to be applied to this location. Will be matched as substring on the path, so be careful. Separate with comma. Like: ignoredir,otherignoredir"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Save"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Get PRO version now to start doing file migration and more! Free 14 day trial - Creditcard required"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "PRO version only"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Could not grab the database tables names from remote"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Could not grab the file data from remote - It may be caused by different versions of WP Synchro"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Got a response from remote site, but did not get correct response - Check access key and website url"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Debug information - HTTP code: {0} - Response: {1}"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "No proper response from remote server - Check that website and access key is correct and WP Synchro is activated"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Please choose a name for this migration"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Email list from 'notify success' in General Settings is not valid. Emails must be valid and separated by semicolon."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Email list from 'notify errors' in General Settings is not valid. Emails must be valid and separated by semicolon."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Security token is no longer valid - Refresh the page and save the changes again."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Could not save migration at the moment - Try again later."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "If saving error persist, you might need to refresh page and make the changes again."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Edit migration"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Add migration"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Migration is now saved"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Migration is now created"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Sites are using different versions of WP Synchro. One uses {0} and the other uses {1}. Upgrade to newest version."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "One of the sites seem to be using a non-standard location for WordPress core compared with the web root. This needs to be the same on both ends if migration also includes files. If you are just synchronizing database, you can ignore this warning. Source web root was: {0} and source WP dir: {1}. Target web root was {2} and target WP dir: {3}."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "The web root for the {0} site is overlapping with the {1} site web root. This is not a problem if it is on a different server, but if they have overlapping paths on the same server, it will create problems if you try to migrate all files. To prevent problems, make sure each site has its own location with no other sites inside. Database migration will work without problems. For more information, see the documentation on sub directory sites on daev.tech"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Disabled because read or write access to this location is disabled on the source or target server - Normally by incorrect file permissions"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Migration"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Choose a name"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Name"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Choose a name for the migration, which will be used to identify it in the list of migrations. Use something like: Pull DB from production"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Type of migration"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Pull from remote site to this site "
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Push this site to remote site"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Where to pull from"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Where to push to"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Website (full url)"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "The URL of the site you want to pull from or push to. Format: https://example.com"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Validated"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "The access key from the remote site. It can be found in WP Synchro > Setup menu on the remote site."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Connection options"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Connection"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Direct connection (default)"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Basic authentication (username+password)"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Verify SSL certificate"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Verify SSL certificates - Uncheck this if you want to allow self-signed certificates"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Verify connection to remote site"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Errors was found"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Warnings was found"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Multisite migration"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "NOT SUPPORTED"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Multisite migration is not supported, so if you want to try to use it anyway, make sure to test it in a safe manner."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "General settings"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Clear cache on success"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Clear the cache on the target on successful migration"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Attempt to clear cache on target on successful migration - support most popular caching plugins where programmatic clearing is supported."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Notify emails on success"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Send emails to email list when migration is successful."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Emails are separated by semicolon. If empty, no emails will be sent."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Uses WordPress standard function wp_mail() to send emails."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Notify emails on error"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Send emails to email list when migration fails."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Data to migrate"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Preconfigured migrations"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Migrate entire site"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Backup database, migrate database, migrate all files from web root level (except WordPress core files)"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Migrate all files from web root level (except WordPress core files)"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Backup database and migrate all database tables"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Backup database (Only PRO version) and migrate all database tables"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Configure exactly what you want to migrate"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Choose data to migrate"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Cron Scheduling"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Schedule your migration to run at certain intervals automatically."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "It will be triggered by WP Cron and therefore requires WP Cron to work."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "You can see and follow the scheduled migrations in the menu 'Scheduled' under 'WP Synchro' menu."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "How often to run migration"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "No cron schedule"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Files migration"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Files and directories to migrate"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Choose the files or directories you want to migrate and how it should be handled."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Disabled because read or write access to this location is disabled on the source or target server - Normally by PHPs open_basedir setting"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Add from outside web root"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Add from web root"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Add from wp-content"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Quick add"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Web root"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Themes"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Plugins"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Uploads"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Locations"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "No files or directories selected yet. Add them with the buttons above."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Please correct these locations:"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "overlaps with"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Full path"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Strategy"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "File"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Dir"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Files on target not existing on source will be kept"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Files on target not present on source will be deleted"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Overwrite"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "File will be overwritten"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "N/A"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Delete this location"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Ask for user confirmation"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Should the user be asked for confirmation before any file changes are done?"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Beware: This will pause the migration, until the changes gets accepted or declined."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Beware: When running in WP-CLI, this user confirmation is always skipped, to prevent blocking."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "User confirmation"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Ask user for confirmation of file changes"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "The user will be presented with a modal popup, that contains lists of the files that will be added/changed or deleted. The user can then choose to accept or decline the changes."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Recommended"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "General exclusions"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Exclude files or directories, separated by comma. Ex: .htaccess,favicon.ico,my-secret-dir"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "WP folders wp-admin, wp-includes and WP files in web root, as well as WP Synchro plugin and data are excluded."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "These are applied to all file locations chosen in file/dir location list."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Database migration settings"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Backup database tables"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Backup chosen database tables to file"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Backup database tables before overwriting them. Will be written to a .sql file that can be imported again by phpmyadmin or equal tools."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Table prefix migration"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Migrate table prefix and data if needed"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Will rename database tables, so they match the correct prefix on target - Will also rename keys in rows in options and usermeta tables. This may cause problems, if the renames accidentally renames something it shouldnt, that is custom or used by another plugin"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Search/replace"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Add your project specific search/replaces."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Search/replace is done in a case sensitive manner and in the order listed below."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Search"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Replace"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Add replace"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Reset to recommended"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Tables to migrate"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Database tables"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "CTRL-A to mark all - Select/deselect tables by holding CTRL while clicking table"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "⌘-A to mark all - Select/deselect tables by holding ⌘ while clicking table"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Migrate all database tables"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Preserve data in options table"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "If you want to keep some of the settings from the options table on the target, select or add them here."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Active plugins"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Preserve active plugins settings"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Preserve which plugins are activated and which ones are not. When enabled, you will not risk having other plugins activated, that you dont already have activated"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Search engine visibility"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Preserve whether search engines are discouraged to index the site"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Custom options keys"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Found in options table from \"option_name\" column. Separated by comma."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Custom options preserve"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "The options table is currently not selected for migration - Table name:"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Could not save due to validation issues"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Save migration"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Go back to overview"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Add files or directories to migrate"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Could not get data from local service ({0}) - Maybe local server has troubles?"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "No proper response from local server - Maybe services is blocked? This can also be a temporary issue, if the host has issues. Please try again"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Unknown error - Maybe this helps:"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Could not get the file changes - Error contacting service"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Could not accept the file changes - Error contacting service - Try again"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Migration aborted, due to user decline of file changes"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Run migration"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Do not navigate away from this page until migration is completed"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Migration completed"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Error(s) during migration:"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Depending on the kind of errors, such as timeouts, it is often possible to resume the migration."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "This will work most of the time, but the safest option is to start a new migration."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Resume migration"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "WARNING(S) (migration will continue):"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Manual steps might be needed to complete migration"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Time elapsed"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Hours"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Minutes"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Seconds"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Stage"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Are you sure you want to delete this?"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Rate WP Synchro on WordPress.org"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Dismiss forever"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Description"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Actions"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Edit"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Duplicate"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Schedule"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Delete"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Run now"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Migration can not be run - See description"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Get started by adding a new migration..."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Scheduling a migration"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "You can schedule this migration in two ways:"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "WP CLI command configured to run on hosting cron"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Using WP Cron on the site, which only requires WordPress Cron system to work on this site."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Scheduling with WP CLI and hosting cron"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Complicated, but better control"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "To schedule a job to run at a certain time or with a certain interval, you need to have "
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "installed."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "With WP CLI installed, you can run this migration"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "with this command"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Or if you want it in quiet mode, with no output"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "You can add this command to hosting cron and run it exactly how you want it."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Scheduling with WP Cron"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Simple, but less control"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "WP Cron is the integrated cron system in WordPress, that allows for background processes to run on a cron-like schedule. It does not guarantee that jobs will be run exactly on time, as it requires site traffic to initiate the jobs."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "But if it is not important to run exactly on a schedule and the site has regular traffic, it requires no server access or any external systems and is quite simple."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "You can enable this by editing your migration and in the 'Cron scheduling' section, you select the interval you want. Make sure to check the menu 'Scheduled' under 'WP Synchro' to check the status on the job."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "WP Synchro data clean up completed - It is nice and clean now"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Getting support"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "You are on the PRO version with a validated license, so you have access to priority email support."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Contact us on"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Be sure to include relevant information, such as:"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Description of problem(s)"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Screenshot of problem(s)"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Result of Health check just below"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Log file from migration (found in menu \"Logs\")"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "We will then get back to you as soon as we have investigated and we will ask for further information if needed."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "You are using the free version of WP Synchro, which we also provide email support for."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Users on the PRO version have priority support, so free version support requests can take more time depending on support load."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Check out"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "on how to get the PRO version."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "The PRO version also contains more useful features, such as synchronizing files."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "If you just have a bug report, security issue or a good idea for WP Synchro, we would still like to hear from you."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Health check"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Debug JSON information"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Contains debug information about the migration, such as configuration and file locations. No personal information is included."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Delete WP Synchro data"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Delete all data related to WP Synchro, in database and files. Can be used to clean up after WP Synchro if needed."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Does not reset access key and license key setup, but removes data like log files and migrations."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Delete all WP Synchro data"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Are you sure you want to delete this log?"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "See your last migrations and the result of them. Here you can also download the log file from the migration."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Delete all logs"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Migration date"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Status"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Logfile"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Show log"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Download log"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Delete log"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Download db backup"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "No migrations are done yet."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "See the changes in each version throughout the history of WP Synchro."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Scheduled migrations"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "See the migrations that have a schedule and when they have completed last time and will run next time."
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Migration name"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "How often it will run"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Last run"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Last completed"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "Next approximate run"
+msgstr ""
+
+#: dist/wpsynchro.js:2
+msgid "No scheduled migrations currently. Edit a migration and set it to be scheduled."
+msgstr ""

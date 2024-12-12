@@ -1,0 +1,301 @@
+= 1.12.0 =
+ * Improvement: Extend cron scheduling system, so migrations can be run with intervals automatically without user intervention and without WP CLI
+ * Improvement: Prevent unwanted background update from PRO version to FREE version for some users
+ * Improvement: Make it possible to only delete a single log from the "Logs" menu, instead of all or nothing
+ * Improvement: Make it possible to download the database backup from a pull migration in "Logs" menu
+ * Bugfix: No longer use ini_restore() native php function, because some hosting does not allow it
+
+= 1.11.5 =
+ * Bugfix: Fix links for usage reporting dialog, leading to a non-existing page
+
+= 1.11.4 =
+ * Change: Bump minimum PHP requirement to 7.2 from 7.0
+ * Change: Bump minimum WP requirement to 5.8 from 5.2
+ * Change: Bump minimum MySQL requirement to 5.7 from 5.5
+ * Change: Bump supported WP version to 6.5
+ * Bugfix: Fix some issues causing menu to generate PHP deprecation issues, even though it just triggered it in WP core functions
+
+= 1.11.3 =
+ * Change: Change all service urls from wpsynchro.com to daev.tech, as we have moved the plugin there
+ * Bugfix: Fixed a minor csrf issue reported by Patchstack - Not a risk to be worried about.
+
+= 1.11.2 =
+ * Bugfix: Fix PHP timeout issue caused by serialized data, kinda like 1.11.1 hotfix, but caused by another data.
+ * Improvement: Added more safety against timeout issues in serialized data, so it wont happen again
+
+= 1.11.1 =
+ * Bugfix: Fix PHP timeout issue caused by serialized string search/replace handler, that goes into endless loop for defective serialized strings
+ * Bugfix: Fix issue with some tables not being migrated when source database is MariaDB and when table does not have a primary key
+ * Improvement: Improve the error reporting when database server gives errors
+
+= 1.11.0 =
+ * Bugfix: No longer have problems with migration of WordFence database tables
+ * Bugfix: Make it possible to resume migrations again, as it was disabled as a mistake
+ * Bugfix: No longer block connections to remote sites that do redirects, but instead just give a warning
+ * Bugfix: Fix health check where PHP function get_headers() was being blocked by ModSecurity on some sites
+ * Bugfix: Give error when trying to migrate "json" data type to MySQL before version 5.7, where it is not supported
+ * Bugfix: Fix licensing code, that was giving PHP notices on PHP 8.2
+ * Bugfix: Improve database migration, so timeouts should be much less likely to happen
+ * Improvement: Improve licensing code to use database option instead of transient, to prevent license server from being overrun by requests
+
+= 1.10.0 =
+ * Improvement: Support for WP 6.3
+ * Improvement: Bump PHP support to minimum 7.0, instead of 5.6. Like WP core did at long last.
+ * Improvement: Support for PHP 8.2 without deprecation notices
+ * Improvement: Bump MariaDB version support to minimum 10.0, from 5.5
+ * Improvement: Added WordPress nonces to all actions for added security
+ * Improvement: Support for restrictive CSP header (Content Security Policy)
+ * Improvement: Handle when remote site redirects to another location, such as WPML redirecting to a specific language subdir
+ * Improvement: Handle when migrating database from MySQL 8 with collation utf8mb4_0900_ai_ci to an older version MySQL server
+ * Improvement: Improve search/replace in very large serialized data, to prevent out of memory errors and vastly improved performance
+ * Improvement: Optimize the way database migration was done to better handle large datasets in rows
+
+= 1.9.1 =
+ * Bump support for WP 6.2
+ * Improvement: API now flushes data before returning
+
+= 1.9.0 =
+ * Bugfix: Fix issue where MU plugin did not load properly
+ * Improvement: Ensure WP 6.1 and PHP 8.1 compatibility
+ * Improvement: Improve the warning message when different versions of WP is used
+ * Improvement: Add search/replaces for db for cases where the protocol part of the url is wrong in db
+ * Improvement: Add check for MU plugin enabled on the target site, when file migration is done, to ensure performance and result
+ * Improvement: Add "resume" button when migrations fail, which can used to attempt resume, in such cases where a simple timeout is the problem
+
+= 1.8.4 =
+ * Hotfix: (Only released for FREE version) Fix php warning because of files only present in PRO version.
+
+= 1.8.3 =
+ * Hotfix: Fix issue when running one of the sites in a subdir, like http://domain.test/mysite1/. Error was like this: "Cannot read properties of undefined (reading 'dbtables')"
+
+= 1.8.2 =
+ * Bugfix: In some cases no search/replaces were done, when using the preconfigured migrations (the affected migrations will be deleted when updating to this version)
+ * Bugfix: Certain MySQL version in 8.0.x range gave problems when migrating to MariaDB, which is now fixed by WP Synchro
+ * Bugfix: Table prefix re-write failed, when there was already data in table with that prefix
+ * Improvement: License information is now included with log files
+
+= 1.8.1 =
+ * Hotfix: Fix case sensitive path introduced in v.1.8.0
+
+= 1.8.0 =
+ * Major change: REST services are no longer used for migrations - Version 1.8.0 will be released to FREE users before PRO users, to make sure everything still works.
+ * Improvement: Make it possible to preserve custom keys in the options table (normally wp_options)
+ * Improvement: Deactivate modal added, to give feedback to developer as to why users deactivate WP Synchro
+ * Improvement: Support for generated columns in database tables
+ * Improvement: Add changelog as a menu, instead of hiding it as a file nobody will ever look at
+ * Improvement: Use "migration" everywhere, instead of using "Installation" or "Synchronization". "Migration" is a better term and better understood.
+ * Improvement: Better handling of database table constraints
+ * Improvement: Check for different WP versions when doing migrations, just as a warning
+ * Improvement: Always show connection options when add/editing migrations, so people dont overlook it
+ * Improvement: Warn when user is trying to migrate site without a table prefix
+ * Bugfix: Fix issue with updater conflicting with other plugins
+
+= 1.7.3 =
+ * Bugfix: Fix issue with self-signed certificates for file finalize actions
+
+= 1.7.2 =
+ * Improvement: Basic authentication username/password is now auto-detected on the site where migration is running
+ * Improvement: Add .DS_Store and .git files to standard exclude for files
+ * Improvement: Improve licensing page to make it more obvious which state the license is in
+ * Improvement: Make it easier to copy access key on 'Setup' page, by adding a "copy to clipboard" button
+ * Improvement: Prevent duplicate and identical search/replaces
+ * Bugfix: Fix migration stage text when i18n numbers format are using space as separator, such as "1 500 000"
+ * Bugfix: Fix problem where both source and target site was protected by basic authentication
+
+= 1.7.1 =
+ * Improvement: Clear all transients after migration, to prevent wrong data in transients on partial migrations
+ * Bugfix: Health check showing connection errors on sites with basic authentication enabled
+ * Bugfix: Some users had issues with checkboxes ('Migrate files', 'Migrate database') on the add/edit migration being reset when saving the migration
+
+= 1.7.0 =
+ * Improvement: When doing file migration, make it an option to show a confirmation dialog to the user before continuing, so the user can verify the which files will be added/changed and deleted
+                In this release, it is not turned on by default, since it is a new feature. But it can enabled by setting preconfigured migration to custom migration and enabling it under 'File migration'
+                It is expected to be enabled by default on the preconfigured migrations in one of the next releases
+ * Improvement: License key for PRO version can now be saved in code, as a PHP constant. Define the constant WPSYNCHRO_LICENSE_KEY in wp-config.php or the likes, which will override database value
+                Example in wp-config.php: define('WPSYNCHRO_LICENSE_KEY', "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+ * Improvement: Ask users for acceptance to send data to wpsynchro.com about the usage of features - No personal data ofc.
+                The data sent can always be seen in migration logs, for full transparency.
+ * Improvement: Database views can now be migrated, in the same way as normal tables
+ * Improvement: Improved health check and added a few more checks to it. Also check if using LocalWP on Windows, which has some bugs, that WP Synchro does not like
+ * Improvement: Slow hosting setting in Setup menu now also reduces file chunk size per request
+ * Improvement: Improved handling of some special characters in filenames for file migration
+ * Improvement: Make sure browsers do not autocomplete fields when setting up a sync
+ * Improvement: Handle when max_allowed_packet is set to a wrong value
+ * Improvement: The table used and created by the plugin is now using more optimized collation
+ * Improvement: Added better help to the add migration page, to help users understand what the fields are for and where to get the data needed
+ * Bug: When syncing mu-plugins, make sure to do the mu-plugin files last, to make sure dependencies are there
+ * Bug: Make sure to migrate user.ini and .htaccess files at the very end, to prevent dependency errors, like loading WAF files etc.
+ * Bug: When populating files, do a file_exists just before getting data on it, to prevent problems with files that are created when indexing, but removed when we collect data on it
+
+= 1.6.4 =
+ * Bugfix: Improve handling of database table charsets/collation and improve error messages, as it was causing problems for some users
+
+= 1.6.3 =
+ * Improvement: Performance improvement by pushing CURL a bit more
+ * Improvement: Clean up for PHP 8.x, so no more warnings and deprecated messages
+ * Bugfix: Site url's are now no longer switched wrongly around on the success/error emails
+ * Bugfix: Fix problem with migration in WP CLI taking way longer than it should
+ * Bugfix: Files migration no longer goes into endless loop for certain version of MySQL 8.0.x
+ * Bugfix: Fix issue where xmlrpc.php was not synchronized from Yoast SEO plugin, giving fatal error from that plugin
+ * Bugfix: Improve error messages when getting SQL errors during database migration, such as too long key errors
+ * Bugfix: Better handle composite keys in database tables, as it did not move all rows correctly for these tables
+ * Bugfix: Show better error messages when license server say no to a migration
+ * Vanity: Format numbers by WP locale, so thousand separator and decimal character will be less confusing for some
+
+= 1.6.2 =
+ * Bugfix: Updating REST service definition that is causing PHP notice on WP 5.5
+
+= 1.6.1 =
+ * Improvement: Added better logging to file population REST service, to better support cases when it is hanging or not progressing
+ * Bugfix: Success notification email were sent many times, when using it with WP CLI runs
+ * Bugfix: Handle edge case when doing data compression, where some hosting adds header to compressed data, causing error on decompression
+
+= 1.6.0 =
+ * Improvement: Better support HTTPS to HTTP migrations, where it previously were dependent on browser. It no longer is
+ * Improvement: Remove IP validation, as it was causing too much troubles with only minimal value
+ * Improvement: Better support for slow hosting or slow connection speed. Can be enabled in "Setup"
+ * Improvement: Better uninstall hook that cleans up the database and files like a good little plugin
+ * Improvement: Only keep 20 database backups and logs at any point, to prevent it taking up space
+ * Improvement: Support for basic authentication (.htaccess protected sites) on both ends (PRO version)
+ * Improvement: Add hooks for successful and failed migrations, for devs to hook into (wpsynchro_migration_completed / wpsynchro_migration_failure)
+ * Improvement: Tries to clean cache for popular cache solutions after a successful migration (WP Rocket/WP Super Cache/W3 Total cache/Comet Cache)
+ * Improvement: Better handles charset and unknown collations - Will now change charset and collation to recommended for WP (utf8mb4)
+ * Improvement: Configure email to send email to on successful/failed migration (PRO version)
+ * Improvement: Remove option to set debug logging and just make it the default
+ * Improvement: Add logo to all headers on all pages
+ * Improvement: Massively improved database finalize, doing it chunked instead of in one go, that could create problems on sites with many tables
+ * Improvement: Rewrote the file population algorithm, to make it much faster and safer to run (PRO version)
+ * Improvement: Added new default database search/replace with urlencoded urls, that is used by some page builder plugins
+ * Bugfix: Fix problem when it sometimes try to load a file that does not exist in the free version
+ * Other: Bump minimum supported WP to 4.9 from 4.7
+
+= 1.5.2 =
+ * Bugfix: File population can in certain cases generate REST errors
+
+= 1.5.1 =
+ * Bugfix: Make multisite error a warning instead, to prevent blocking users that want to use it anyway
+ * Bugfix: Make "WP in own dir" error a warning instead of error, improve the path detection and give a more detailed warning message
+ * Improvement: Change JSON debug information to also include file paths and remove the general debug data
+
+= 1.5.0 =
+ * General: Overall improvement of stability and many big and small improvements
+ * Improvement: Support for replacing url's inside json data, such as Elementor templates (wp.org issue)
+ * Improvement: Finally full support for all MySQL datatypes
+ * Improvement: Support for subdirectory sites
+ * Improvement: Search/replaces are not editable and removable, even the default ones
+ * Improvement: General improvement of error messages given to the user
+ * Improvement: Support for WordPress 5.3, which is just around the corner
+ * Improvement: Proper message when doing migration from HTTPS site to HTTP site, which Chrome no longer allows
+ * Improvement: Added option in "setup" menu to disable IP security check - Can be needed if requests pass multiple server
+ * Improvement: Proper warning to user on migration creation, if one of the two sites have overlapping paths
+ * Improvement: Add check to make sure database user can create tables in the database
+ * Improvement: Implement PSR4 autoloading with composer
+ * Improvement: More intelligent support for WordPress in its own directory - Such as Roots Bedrock
+ * Improvement: Logs are now rotated and will have max 20 logs at any point - older will be deleted
+ * Improvement: Added a button on "Logs" page to remove all the logs
+ * Improvement: Making it more clear when a "migration" is new or being edited
+ * Improvement: Better deactivation, that now removes the database tables
+ * Bugfix: Try to prevent REST service call periodic timeouts, which we have seen some users having trouble with
+
+= 1.4.1 =
+ * Highlight: Maintenance release with bugfixes
+ * Improvement: When REST service calls fail, make sure to log more debug logging for easier troubleshooting
+ * Bugfix: Proper error is not thrown when failing file reads because of permissions
+ * Bugfix: Improvement of IP detection function, that in some cases did not return correct IP
+ * Bugfix: In some cases, an endless loop happened when file was remove mid-migration
+ * Bugfix: WP CLI had its time limit removed, as it is not relevant in CLI environment
+
+= 1.4.0 =
+ * Highlight: Big improvement to the compatibility with different hosting setups - Everything now runs chunked in 30 seconds or less, which prevents timeouts on some hosting
+ * Bugfix: SAVEQUERIES constant now properly detected
+ * Bugfix: Proper handling of unlimited memory limit and max execution time in PHP
+ * Bugfix: Prevent security token timeout on slow systems
+ * Bugfix: Database backup mistakenly went into endless loop, when having no tables to backup
+
+= 1.3.2 =
+ * Improvement: Make database table prefix migration a option instead of forced - Warning will be issued if it is disabled and prefixes are different
+ * Improvement: Database table prefix migration will now also change prefix in data in the usermeta and options table
+ * Improvement: Added timeout check to healthcheck, to tell people when they have a misconfiguration in their hosting setup
+
+= 1.3.1 =
+ * Hotfix: Error in frontend timer causing error in migration even if migration running fine
+
+= 1.3.0 =
+ * Highlight: WP CLI command to run migrations via cron or other external trigger (see submenu "Schedule" on migration in overview screen)
+ * Highlight: Support migration between migrations using different table prefixes - Will automatically change it
+ * Highlight: Major improvement to the data transport - All data will now be compressed and encrypted, regardless of using HTTPS or not
+ * Improvement: Handling all the timing in a central way, to optimize timers and decrease risk of hitting PHP max_execution_time limits
+ * Improvement: Adding a "Duplicate" option to the overview, so its quick and easy so setup new migrations
+ * Improvement: Downloading log files is not downloaded as zip file, because logs can get big
+ * Improvement: Better handling of problems with uppercase database table names, that is not supported on all databases
+ * Bugfix: Trying to write a filename with a unsupported filename will now generate warning instead of error
+
+= 1.2.0 =
+ * Highlight: Major rewrite of files migration and many improvements in database migration
+ * Highlight: Implementing preconfigured migration setups, to make it simple for those just wanting to move everything
+ * Highlight: Database backup before database migration (PRO version only)
+ * Improvement: Improve selective migration of files - Much faster and safer
+ * Improvement: Support for PHP's open_basedir configurations
+ * Improvement: Search/replaces on domain and web root are now locked, but still possible to add custom
+ * Improvement: Implemented retries for all requests if one of the servers has temporary problems
+ * Improvement: Improvement of security by using sha256 instead of sha1 for token
+ * Improvement: Support for migration of database tables close to the 65 char limit
+ * Improvement: No more data store in temp file on disk - Moved to database table instead
+ * Improvement: Makes finalize more likely to complete with success
+ * Improvement: Less aggressive "Buy PRO" ad. Moved to the side instead of being a bit too annoying
+ * Improvement: General UI improvements, with better text and icons
+ * Improvement: Support for database tables with uppercase letters
+ * Improvement: Support for MariaDB 5.5
+ * Improvement: Support for sites using upload_path and upload_url_path
+ * Improvement: Removed option to preserve WP Synchro data - It is now forced to prevent troubles
+ * Bugfix: Pull/push filtering on overview now works again
+ * Bugfix: Handle properly when max_post_size is set to 0
+ * Bugfix: Fixed database search/replace in serialization with special case
+
+= 1.1.0 =
+ * Highlight: Massive performance improvement for all migrations - Now using MU plugin to skip plugins/themes loading for WP Synchro requests
+ * Highlight: Self healthcheck that will self-diagnose known troubles on each site
+ * Improvement: Make frontend JS more tolerant of intermittent host timeouts
+ * Improvement: Support for self-signed certificates
+ * Bugfix: Fixed a lot of smaller bugs on database sync
+ * Bugfix: Fixed bugs when syncing files with special characters, such as the Danish æøå
+
+= 1.0.5 =
+* WordPress 5.0 compatibility
+* PHP 7.3 compatibility
+* Bugfix: Fixed compatibility with some WordFence plugin tables, that use binary columns for some obscure reason
+* Feature: Add index.php to uploads folder for security
+* Feature: Add buffering to logger, to increase performance
+* Feature: Add timer to run sync window, so elapsed time can be seen
+* Feature: Make is possible to rearrange search/replaces in migration configuration
+* Feature: Create section in Support menu, to make is possible to clean the database and disk for WP Synchro artifacts
+* Feature: Hide license key on the frontend
+* Feature: For large file transfer, take the partial progress into account in global progress indicator
+* Feature: Introduce Log menu, where migration logs can be viewed and downloaded
+* Feature: Better error messages when access key is wrong
+
+= 1.0.4 =
+* Bugfix: Fixed typo in REST services require that broke migration on *nix hosts
+
+= 1.0.3 =
+* First release of PRO version with file migration! Check out wpsynchro.com
+* Added debug page
+* Added .pot file for translation
+* Added localization for js
+* Added details to progress indicators (with data amount and ex. rows for database sync)
+* Added verification that both ends of migration is same version to prevent crazy stuff
+* Added database version, so we can handle that going forward
+* Added http warning in add/edit screen
+* Changed so first search/replace will be there as default on new
+* Simplified readme.txt
+* Cleaned up code around migration
+
+= 1.0.2 =
+* Bugfixing
+
+= 1.0.1 =
+* Added MySQL 5.5 support
+
+= 1.0.0 =
+* First official release
+* Such cool, much wow
